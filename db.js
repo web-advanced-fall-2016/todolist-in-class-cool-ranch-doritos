@@ -21,9 +21,9 @@ let db = {
     addTask: (task) => {
         task.id = tasks.length;
         tasks.push(task); //push the changes back to json file
-        db.updateFile();//update
+        db.updateList();//update
     },
-    updateFile: () => {
+    updateList: () => {
         fs.writeFile('./todolist.json', JSON.stringify(newTask), (err) => {
             if (err)
                 console.log('File not updated');
@@ -31,5 +31,7 @@ let db = {
         });
     }
 };
+
+
 
 module.exports = db;

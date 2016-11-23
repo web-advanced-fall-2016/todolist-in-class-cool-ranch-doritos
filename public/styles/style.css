@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700|Source+Sans+Pro:300,400,600');
+
 body{
 	background-color: black;
 }
@@ -11,12 +13,12 @@ body{
 }
 
 #myList h1 {
-	font-family: "Gotham", sans-serif;
+	font-family: 'Oswald', sans-serif;
 	font-size: 32px;
 	text-transform: uppercase;
 	text-align: center;
 	color: white;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
 #newTask {
@@ -27,6 +29,7 @@ body{
 	color: teal;
 	font-size: 17px;
 	padding-left: 5px;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 #newTask:focus {
@@ -42,7 +45,7 @@ body{
 	background-color:teal;
 	border:3px solid aquamarine;
 	color:aquamarine;
-	font-family:"Gotham", sans-serif;
+	font-family:'Oswald', sans-serif;
 	font-size:14px;
 }
 
@@ -66,7 +69,7 @@ body{
 	font-size: 16px;
 	padding-top: 3px;
 	padding-left: 5px;
-	font-family: 'Gotham', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	
 }
 
@@ -79,16 +82,16 @@ body{
 	background-color: teal;
 	border:1px solid aquamarine;
 	color:aquamarine;
-	font-family:Arial Black;
+	font-family:'Oswald', sans-serif;
 	font-size:15px;
 	padding: 0px;
 	cursor: pointer;
 }
  
-#deleteAll {
+/*#deleteAll {
 	padding-top: 4px;
 	margin-top: 10px;
 	color:aquamarine;
 	background-color: teal;
 	border:2px solid aquamarine;
-}
+}*/

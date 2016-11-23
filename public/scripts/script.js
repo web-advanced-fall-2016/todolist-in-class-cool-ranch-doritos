@@ -16,10 +16,10 @@ var i;
             console.log(response.length);
 
             //create element
-            let newTask = document.createElement('div');
-            newTask.className = 'task';
+            let newItem = document.createElement('div');
+            newItem.className = 'task';
 
-            list.appendChild(newTask);
+            list.appendChild(newItem);
 
             let task = document.createElement('p');
             task.innerHTML = response[i].task;
@@ -37,10 +37,10 @@ var i;
             });
 
             //append the task to the taskdiv
-            newTask.appendChild(task);
+            newItem.appendChild(task);
 
             //append the delete button to the newTask div
-            newTask.appendChild(deleteButton);
+            newItem.appendChild(deleteButton);
 
             myList.appendChild(list);
         }
@@ -69,7 +69,7 @@ let sendTask = function(data) {
             if (res.status == 200)
                 return res.json();
             else
-                throw new Error('Something went wrong on server!');
+                throw new Error('Something went wrong!');
         })
         .then(function(res) {
             console.log(res.length);
@@ -77,13 +77,10 @@ let sendTask = function(data) {
             deleteTask();
         })
         .catch(function(err) {
-            console.warn(`Couldn't fetch info list`);
+            console.warn(`Couldn't fetch list`);
             console.log("err");
         });
 };
-
-
-//testing
 
 function saveTask() {
     let taskInput = document.getElementById("newTask");
@@ -94,13 +91,13 @@ function saveTask() {
         sendTask(newTodo);
     }
 
-    let newTask = document.createElement('div');
-    newTask.classList.add('task');
+    let newItem = document.createElement('div');
+    newItem.classList.add('task');
     console.log(todo);
     // todoDiv.innerHTML += `<li class='todoName'>${todo}</p><span class='deleteTodo'>x</span>`;
 
-    newTask.id = i++;
-    taskInput.appendChild(newTask);
+    newItem.id = i++;
+    taskInput.appendChild(newItem);
     taskInput.value = "";
 };
 
@@ -228,6 +225,7 @@ var init = function() {
     addButton.addEventListener('click', function(e) {
 
         e.preventDefault();
+        sendTask();
         saveTask();
 
     });
