@@ -1,17 +1,22 @@
-#myAwesomeToDoList {
+body{
+	background-color: black;
+}
+
+#myList {
 	width: 510px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 5px;
+	margin:50px auto 0 auto;
+	padding: 20px;
 	height: auto;
 	background-color: teal;
 }
 
-#myAwesomeToDoList h1 {
+#myList h1 {
 	font-family: "Gotham", sans-serif;
+	font-size: 32px;
 	text-transform: uppercase;
 	text-align: center;
 	color: white;
+	padding-bottom: 10px;
 }
 
 #newTask {
@@ -19,8 +24,9 @@
 	height: 35px;
 	background-color: #e2e2e2;
 	border: solid 3px white;
-	color: navy;
+	color: teal;
 	font-size: 17px;
+	padding-left: 5px;
 }
 
 #newTask:focus {
@@ -36,12 +42,13 @@
 	background-color:teal;
 	border:3px solid aquamarine;
 	color:aquamarine;
-	font-family:"Gotham";
+	font-family:"Gotham", sans-serif;
 	font-size:14px;
 }
 
 #taskList {
-	margin-top: 30px;
+	/*margin-top: 30px;*/
+	margin: 30px auto 0 auto;
 }
 
 .task {
@@ -59,7 +66,7 @@
 	font-size: 16px;
 	padding-top: 3px;
 	padding-left: 5px;
-	font-family: 'Arial', sans-serif;
+	font-family: 'Gotham', sans-serif;
 	
 }
 

@@ -3,32 +3,24 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Todo List</title>
+    <title>ToDo List</title>
     <link rel="stylesheet" type="text/css" href="styles/reset.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 
 <body>
-    	<div id="myAwesomeToDoList">
-		<h1>To Do List</h1>
-				
-		<div id="taskAdder">
-			<form>
-				<input type="text" id="newTask" >
-				<input type="submit" id="addButton" value="ADD">
-			</form>
-		</div>
+    <div id="myList">
+        <h1>ToDo List</h1>
+        <div id="taskAdd">
+            <form>
+                <input type="text" id="newTask" placeholder="What do you have to do?">
+                <input type="submit" onclick="saveTask()" id="addButton" value="ADD">
+            </form>
+        </div>
     </div>
-		
-		<div id="taskList">
-
-		</div>
-	
-	</div>
-	
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="script/script.js"></script>
-	
+    <div id="taskList"></div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>
