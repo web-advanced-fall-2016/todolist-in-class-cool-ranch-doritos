@@ -114,11 +114,18 @@
     //delete task
     let deleteTask = function(e) {
 
+        // $.ajax({
+        // type:"DELETE",
+        // url: url + `/todos`,
+        // data: {"id":id},
+        //  }).done(function(res){
+
         console.log('DELETE');
         var taskNumber = e.target.parentNode;
         taskNumber.remove();
         // db.tasks.splice(taskNumber, 1);
         console.log('removing a Task number ' + taskNumber.id);
+    // };
     };
 
 
