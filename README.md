@@ -1,21 +1,30 @@
 # JANE + AINE | Session 11 | in class exercise
 
+### Features
+
+- Load To Do List Suggestions from Database
+- Add new items to the todo list.
+- Remove existing items from the todo list.
+- View all the existing items and descriptions when page loads as long as the server instance is running.
+
 ### Setup
 
 1) Clone or download respository
-2) Open Terminal: navigate to folder, 
+2) Open Terminal: navigate to folder, enter -npm install
+3) Once install complete: enter -npm start 
+4) If Terminal says: 'Server running and listening at http://localhost:3000/' ---- Everything is running as expected
+
+### Getting Started
+
+1) Open http://localhost:3000 in a browser window
+2) The pre-loaded items should appear on the list
+3) To add your own items to the todo list, enter the item into the textbox and hit the 'ADD' button when you are done
+4) Once you have added an item to the todo list, refresh the website to see the updated list
+5) To remove an item hit the 'X' next to that item
 
 ### Resources
 
-Provided within this repository is a basic scaffold that includes an `express` application that runs a serve on `localhost:3000`. Run the server with: `npm start`. Build your application on tip of this scaffold.
-
-You are allowed to use third party libraries/tools like JQuery/Bootstrap.
-
-### Features
-
-- Add new items to the todo list.
-- Remove existing items fro the todo list.
-- View all the existing items and descriptions when page loads as long as the server instance is running.
+To create this ToDo List we utilized the jquery library. We also referenced the styling and web framework from a previous MFADT bootcamp class project. 
 
 
 
