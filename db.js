@@ -10,7 +10,7 @@ let db = {
     getTask: (id) => {
         for (let task of tasks) {
             if (task.id == id) {
-                let res = Object.assign({}, task); // cloning and returning the task
+                // cloning and returning the task
                 return Object.assign({}, task);
                 console.log("work work work work work");
             }
