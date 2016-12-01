@@ -14,6 +14,45 @@
 3) Once install complete: enter -npm start 
 4) If Terminal says: 'Server running and listening at http://localhost:3000/' ---- Everything is running as expected
 
+### Endpoints
+
+| URL      | Descriptions                     | Response Structure | Method |
+| -------- | -------------------------------- | ------------------ | ------ |
+| `/tasks` | returns all the available tasks  |                    | GET    |
+| `/tasks` | adds a new item to the task list |                    | POST   |
+|          |                                  |                    |        |
+
+response structure of `/tasks` (GET)
+
+```json
+{
+  message: 'success'
+  data: [
+    {
+      desciption: 'clean you room!',
+  		id: 1234
+    },
+	{
+            desciption: 'clean you room!',
+  		id: 1234
+	},
+	...
+  ]
+}
+```
+
+response structure of '/tasks' (POST)
+
+```json
+{
+  message: 'success',
+  data: {
+    description: 'do your assignment!',
+    id: 1235
+  }
+}
+```
+
 ### Getting Started
 
 1) Open http://localhost:3000 in a browser window

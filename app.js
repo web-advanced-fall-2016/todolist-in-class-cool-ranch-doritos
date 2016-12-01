@@ -18,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 let todolist = require('./todolist');
 const db = require('./db.js');
 var fs = require('fs');
+var lists = todolist;
 
 // testing
 app.use(function(req, res, next) {
@@ -27,9 +28,11 @@ app.use(function(req, res, next) {
 
 //sending data to client side
 app.get('/tasks', function(req,res, next){
-	res.json(db.getList());
-	let tasks = db.getList();
-  next();
+	if(!lists.length) {
+		res.json({message: 'no item', data: {}});
+	} else {
+		res.json({message: 'success', data: lists});
+	}
 });
 
 //sending ids.
@@ -42,9 +45,21 @@ app.get('/tasks/:task_id', function(req,res,next){
 
 //receive request and post to body
 app.post('/tasks', function(req,res, next){
-	db.getList(req.body);
-	console.log(req.body);
-	todolist.push(req.body);
+
+	let data = req.body;
+	console.log(data);
+	if( data.description) {
+		let newItem = {
+			description: data.description,
+			id: lists.length
+		};
+
+		lists.push(newItem);
+		res.json({message: 'success', data: newItem});
+		db.saveList(lists);
+	} else {
+		res.json({message: 'error, you need to add descriptionto the body of your request!', data: {}});
+	}
 });
 
 /*====================*/
